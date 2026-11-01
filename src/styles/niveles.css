@@ -1,0 +1,186 @@
+@font-face {
+    font-family: "Milagros";
+    src: url("../assets/fonts/dtmilagrosregular-dyoad.otf") format("opentype");
+}
+.pantalla-niveles {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: #E4EED8;
+    overflow: hidden;
+}
+
+
+/* FONDO */
+
+.fondo-niveles {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    z-index: 0;
+    pointer-events: none;
+}
+
+
+/* TÍTULO */
+
+.titulo-recorrido {
+    position: absolute;
+font-family: "Milagros";
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background-color: #E4EED8;
+
+    padding: 15px 40px;
+
+    z-index: 3;
+}
+
+.titulo-recorrido h1 {
+    margin: 0;
+
+    color: #556F50;
+    font-size: 42px;
+
+    white-space: nowrap;
+}
+
+
+/* ÁREA DE RESGUARDO */
+
+.area-recorrido {
+    position: absolute;
+
+    width: 72%;
+    height: 72%;
+
+    left: 50%;
+    top: 56%;
+
+    transform: translate(-50%, -50%);
+
+    background-color: transparent;
+
+    z-index: 1;
+}
+
+
+/* SVG */
+
+.lineas-recorrido {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: visible;
+
+    z-index: 1;
+    pointer-events: none;
+}
+
+
+/* LÍNEAS */
+
+
+
+
+/* NIVELES */
+
+.nivel-posicion {
+    position: absolute;
+
+    /* IMPORTANTE:
+       botones siempre por encima de las líneas */
+    z-index: 2;
+}
+
+.nivel-posicion::before {
+    content: "";
+
+    position: absolute;
+
+    top: -18px;
+    right: -18px;
+    bottom: -18px;
+    left: -18px;
+
+    background-color: #E4EED8;
+    border-radius: 50px;
+
+    z-index: -1;
+}
+.nivel-1 {
+    top: 8%;
+    left: 3%;
+}
+
+
+.nivel-2 {
+    top: 26%;
+    right: 3%;
+}
+
+
+.nivel-3 {
+    top: 55%;
+    left: 3%;
+}
+
+
+.nivel-4 {
+    top: 78%;
+    right: 3%;
+}
+.lineas-recorrido {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: visible;
+
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* RESGUARDO VERDE CLARO DETRÁS */
+
+.lineas-recorrido .resguardo-linea {
+    fill: none;
+
+    stroke: #E4EED8;
+    stroke-width: 35px;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* LÍNEA VERDE */
+
+.lineas-recorrido .conexion-linea {
+    fill: none;
+
+    stroke: #556F50;
+    stroke-width: 2px;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}

@@ -1,0 +1,112 @@
+@font-face {
+    font-family: "Milagros";
+    src: url("../assets/fonts/dtmilagrosregular-dyoad.otf") format("opentype");
+}
+
+.pantalla-resultado {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: 2px solid #171717;
+    background-color: #E4EED8;
+}
+
+.pantalla-resultado h1 {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    margin: 0;
+    transform: translateX(-50%);
+    color: #556F50;
+    font-family: "Milagros";
+    font-size: clamp(24px, 3vw, 34px);
+    white-space: nowrap;
+}
+
+.resultado-contenido {
+    position: absolute;
+    top: 22%;
+    right: 8%;
+    bottom: 25%;
+    left: 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 8%;
+}
+
+.resultado-datos {
+    width: min(100%, 350px);
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: #CBD5BD;
+}
+
+.resultado-datos .dato {
+    font-size: clamp(16px, 2vw, 22px);
+}
+
+.resultado-datos .dato + .dato {
+    border-top: 1px solid #9EAD91;
+}
+
+.resultado-crecimiento {
+    justify-self: center;
+    width: min(100%, 50vh, 460px);
+}
+
+.resultado-botones {
+    position: absolute;
+    right: 0;
+    bottom: 8%;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+}
+
+.resultado-botones .boton {
+    min-width: 205px;
+    padding: 12px 30px;
+    font-size: clamp(16px, 2vw, 20px);
+}
+
+.resultado-botones .boton:disabled {
+    cursor: default;
+}
+
+@media (max-width: 700px) {
+    .resultado-contenido {
+        top: 16%;
+        right: 6%;
+        bottom: 22%;
+        left: 6%;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        gap: 1%;
+    }
+
+    .resultado-datos {
+        justify-self: center;
+        width: min(100%, 370px);
+    }
+
+    .resultado-datos .dato {
+        padding: 8px 12px;
+    }
+
+    .resultado-crecimiento {
+        width: min(65vw, 310px);
+    }
+
+    .resultado-botones {
+        bottom: 4%;
+        gap: 12px;
+    }
+
+    .resultado-botones .boton {
+        min-width: 0;
+        padding: 10px 16px;
+    }
+}

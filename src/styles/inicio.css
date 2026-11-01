@@ -1,0 +1,63 @@
+@font-face {
+    font-family: "Milagros";
+    src: url("../assets/fonts/dtmilagrosregular-dyoad.otf") format("opentype");
+}
+.pantalla-inicio {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    background-color: #E4EED8;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+
+/* ILUSTRACIÓN */
+
+.hongos-inicio {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    top: 0;
+    left: 0;
+
+    pointer-events: none;
+}
+
+
+/* TEXTO CENTRAL */
+
+.contenido-inicio {
+    position: relative;
+    z-index: 1;
+
+    text-align: center;
+}
+
+
+.contenido-inicio h1 {
+    margin: 0;
+font-family: "Milagros";
+    font-size: 110px;
+    color: #556F50;
+}
+
+
+.contenido-inicio p {
+    margin-top: 20px;
+font-family: "Milagros";
+    font-size: 24px;
+    color: #556F50;
+}

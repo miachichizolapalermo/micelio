@@ -1,0 +1,304 @@
+@font-face {
+    font-family: "Milagros";
+    src: url("../assets/fonts/dtmilagrosregular-dyoad.otf") format("opentype");
+}
+/* COMPONENTE: BOTÓN */
+
+.boton {
+    background-color: #536D4E;
+    color: #E4EEDB;
+
+    border: none;
+    border-radius: 80px;
+
+    padding: 15px 40px;
+
+    font-size: 20px;
+    font-family: "Milagros";
+    cursor: pointer;
+
+    transition: background-color 0.3s ease;
+}
+
+/* ESTADO HOVER */
+
+.boton:hover {
+    background-color: #74956D;
+}
+
+.nivel,
+.timer {
+    background-color: #E4EEDB;
+    color: #4f3b8f;
+
+    border-radius: 70%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: "Milagros";
+    font-weight: bold;
+}
+.nivel {
+    width: 150px;
+    height: 50px;
+
+    font-size: 22px;
+}
+
+.timer {
+    width: 150px;
+    height: 50px;
+
+    font-size: 22px;
+}
+/* COMPONENTE FUNGI */
+
+.fungi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.fungi img {
+    width: 250px;
+    height: 250px;
+
+    object-fit: contain;
+}
+
+.fungi p {
+    margin-top: 20px;
+
+    /* Pon aquí tu tipografía */
+    font-family: "Milagros";
+    font-size: 24px;
+
+    /* Tu color */
+    color: #556F50;
+
+    padding-bottom: 5px;
+
+    border-bottom: 2px solid transparent;
+}
+
+
+/* HOVER */
+
+.fungi:hover p {
+    border-bottom-color: currentColor;
+}
+
+
+/* SELECCIONADO */
+
+.fungi.seleccionado p {
+    border-bottom-color: currentColor;
+}
+#fungis {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+/* COMPONENTE DATO */
+
+.dato {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    color: #536D4E;
+
+    margin: 0;
+    padding: 12px 16px;
+}
+/* CRECIMIENTO */
+
+.crecimiento {
+    width: 100%;
+}
+
+.crecimiento-imagen {
+    position: relative;
+    width: 100%;
+}
+
+
+/* Imagen base: define la altura real del contenedor */
+.crecimiento-fondo {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    opacity: 0.15;
+}
+
+/* Área del hongo que ya creció */
+.crecimiento-progreso {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+
+/* HONGO AL 100% DE OPACIDAD */
+
+.crecimiento-activo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Línea del porcentaje */
+.crecimiento-linea {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    border-top: 2px solid #4D319B;
+}
+
+
+/* NÚMERO DEL PORCENTAJE */
+
+.crecimiento-linea span {
+    position: absolute;
+    right: 0;
+    bottom: 8px;
+    color: #4D319B;
+    font-size: 32px;
+    font-weight: bold;
+}
+/* NIVEL MAPA */
+
+.nivel-mapa {
+    width: 245px;
+    height: 112px;
+
+    border-radius: 38px;
+    font-size: 42px;
+
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* NIVEL COMPLETADO */
+
+.nivel-mapa.completado {
+    background-color: #556F50;
+    color: #E4EED8;
+    border: 2px solid #556F50;
+}
+
+/* NIVEL DISPONIBLE */
+
+.nivel-mapa.disponible {
+    background-color: transparent;
+    color: #556F50;
+    border: 3px solid #556F50;
+}
+
+/* NIVEL BLOQUEADO */
+
+.nivel-mapa.bloqueado {
+    background-color: transparent;
+    color: #556F50;
+    border: 3px solid #556F50;
+
+    opacity: 0.25;
+    cursor: default;
+}
+.laberinto {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+
+    background-color: #E4EED8;
+}
+
+.celda {
+    position: relative;
+}
+
+.pared {
+    position: relative;
+    background-color: transparent;
+}
+
+.camino {
+    position: relative;
+    background-color: transparent;
+}
+
+.paredes-laberinto {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: visible;
+    pointer-events: none;
+}
+
+.paredes-laberinto path {
+    fill: none;
+    stroke: #556F50;
+    stroke-width: clamp(3px, 1vh, 9px);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    vector-effect: non-scaling-stroke;
+}
+
+
+/* RASTRO MORADO */
+
+.rastro-laberinto {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 2;
+
+    pointer-events: none;
+}
+
+.rastro-laberinto polyline {
+    fill: none;
+
+    stroke: #4D319B;
+    stroke-width: 0.12;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+/* JUGADOR */
+
+.jugador {
+    position: absolute;
+
+    width: 18px;
+    height: 18px;
+
+    background-color: #4D319B;
+    border-radius: 50%;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 3;
+}

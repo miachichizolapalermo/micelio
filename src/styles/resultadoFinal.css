@@ -1,0 +1,133 @@
+@font-face {
+    font-family: "Milagros";
+    src: url("../assets/fonts/dtmilagrosregular-dyoad.otf") format("opentype");
+}
+
+.pantalla-resultado-final {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border: 2px solid #171717;
+    background-color: #E4EED8;
+}
+
+.pantalla-resultado-final > h1 {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    margin: 0;
+    transform: translateX(-50%);
+    color: #556F50;
+    font-family: "Milagros";
+    font-size: clamp(24px, 3vw, 34px);
+    white-space: nowrap;
+}
+
+.resultado-final-contenido {
+    position: absolute;
+    top: 20%;
+    right: 8%;
+    bottom: 24%;
+    left: 8%;
+    display: grid;
+    grid-template-columns: 0.8fr 1.5fr;
+    align-items: center;
+    gap: 8%;
+}
+
+.resultado-final-resumen {
+    width: min(100%, 350px);
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: #CBD5BD;
+}
+
+.resultado-final-resumen .dato {
+    font-size: clamp(16px, 2vw, 22px);
+}
+
+.resultado-final-resumen .dato + .dato {
+    border-top: 1px solid #9EAD91;
+}
+
+.resultado-final-crecimiento {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+    min-width: 0;
+}
+
+.resultado-final-crecimiento .crecimiento {
+    flex: 0 1 65%;
+    min-width: 0;
+    max-width: 460px;
+}
+
+.resultado-final-crecimiento .mensaje-cierre {
+    flex: 0 1 30%;
+    margin: 0;
+    color: #4D319B;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(15px, 1.7vw, 20px);
+    font-style: italic;
+    line-height: 1.25;
+}
+
+.resultado-final-botones {
+    position: absolute;
+    right: 0;
+    bottom: 8%;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+}
+
+.resultado-final-botones .boton {
+    min-width: 180px;
+    padding: 12px 30px;
+    font-size: clamp(16px, 2vw, 20px);
+}
+
+@media (max-width: 700px) {
+    .resultado-final-contenido {
+        top: 15%;
+        right: 6%;
+        bottom: 20%;
+        left: 6%;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        gap: 4%;
+    }
+
+    .resultado-final-resumen {
+        justify-self: center;
+        width: min(100%, 370px);
+    }
+
+    .resultado-final-resumen .dato {
+        padding: 8px 12px;
+    }
+
+    .resultado-final-crecimiento {
+        justify-self: center;
+        width: min(100%, 460px);
+        gap: 4%;
+    }
+
+    .resultado-final-crecimiento .crecimiento {
+        flex-basis: 65%;
+    }
+
+    .resultado-final-botones {
+        bottom: 4%;
+        gap: 12px;
+    }
+
+    .resultado-final-botones .boton {
+        min-width: 0;
+        padding: 10px 18px;
+    }
+}

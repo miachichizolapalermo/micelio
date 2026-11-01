@@ -1,0 +1,108 @@
+.pantalla-juego {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: #E4EED8;
+
+    overflow: hidden;
+}
+
+
+/* ILUSTRACIÓN DE FONDO */
+
+.fondo-juego {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    top: 0;
+    left: 0;
+
+    object-fit: cover;
+
+    z-index: 0;
+}
+
+
+/* NIVEL + TIMER */
+
+.hud-juego {
+    position: absolute;
+
+    top: 5%;
+    left: 5%;
+    right: 5%;
+
+    display: flex;
+    justify-content: space-between;
+
+    z-index: 3;
+}
+
+
+/* LABERINTO */
+
+.contenedor-laberinto {
+    position: absolute;
+
+    width: 72%;
+    height: 68%;
+
+    left: 50%;
+    top: 56%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 2;
+}
+
+.introduccion-nivel-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 4;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    background-color: rgb(25 34 23 / 48%);
+}
+
+.introduccion-nivel {
+    width: min(100%, 430px);
+    padding: 32px 36px;
+   
+    border-radius: 22px;
+    background-color: #E4EED8;
+    color: #556F50;
+    text-align: center;
+    box-shadow: 0 16px 48px rgb(25 34 23 / 22%);
+}
+
+.introduccion-nivel h2 {
+    margin: 0;
+    font-family: "Milagros";
+    font-size: clamp(22px, 4vw, 30px);
+}
+
+.introduccion-nivel-tiempo {
+    margin: 14px 0;
+    color: #4D319B;
+    font-family: "Milagros";
+    font-size: clamp(38px, 8vw, 56px);
+    line-height: 1;
+}
+
+.introduccion-nivel-descripcion {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(15px, 2.5vw, 18px);
+    line-height: 1.5;
+}
+
+@media (max-width: 480px) {
+    .introduccion-nivel {
+        padding: 26px 22px;
+    }
+}
