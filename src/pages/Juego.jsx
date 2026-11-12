@@ -3,6 +3,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import Nivel from "../components/Nivel";
 import Timer from "../components/Timer";
 import Laberinto from "../components/Laberinto";
+import Boton from "../components/Boton";
 
 import nivel1 from "../niveles/nivel1";
 import nivel2 from "../niveles/nivel2";
@@ -24,17 +25,8 @@ function Juego({ nivel, alCompletar }) {
     const mapa = mapas[nivel];
     const [segundos, setSegundos] = useState(0);
     const [introduccionVisible, setIntroduccionVisible] = useState(true);
-    const [enCurso, setEnCurso] = useState(true);
+    const [enCurso, setEnCurso] = useState(false);
     const inicioRef = useRef(null);
-
-    useEffect(() => {
-        const espera = setTimeout(() => {
-            inicioRef.current = Date.now();
-            setIntroduccionVisible(false);
-        }, 3000);
-
-        return () => clearTimeout(espera);
-    }, []);
 
     useEffect(() => {
         if (introduccionVisible || !enCurso) {
@@ -67,6 +59,13 @@ function Juego({ nivel, alCompletar }) {
     const tiempoObjetivoFormateado =
         `${String(Math.floor(tiempoObjetivo / 60)).padStart(2, "0")}:` +
         String(tiempoObjetivo % 60).padStart(2, "0");
+
+    function comenzarNivel() {
+        inicioRef.current = Date.now();
+        setSegundos(0);
+        setEnCurso(true);
+        setIntroduccionVisible(false);
+    }
 
     return (
         <main className="pantalla-juego">
@@ -103,9 +102,17 @@ function Juego({ nivel, alCompletar }) {
                             {tiempoObjetivoFormateado}
                         </p>
                         <p className="introduccion-nivel-descripcion">
-                            Completa el laberinto en este tiempo para alcanzar
-                            el 100% de eficiencia.
+                            Completa el laberinto dentro del tiempo objetivo
+                            para alcanzar el 100% de eficiencia y hacer crecer
+                            tu hongo un 25%.
+                            <br />
+                            <br />
+                            Si tardas más, tu hongo crecerá menos.
                         </p>
+                        <p className="introduccion-nivel-crecimiento">
+                            CRECIMIENTO MÁXIMO POR NIVEL +25%
+                        </p>
+                        <Boton texto="COMENZAR" accion={comenzarNivel} />
                     </section>
                 </div>
             )}

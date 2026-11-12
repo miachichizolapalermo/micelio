@@ -38,6 +38,8 @@ function SeleccionFungi({ alComenzar }) {
                 <Fungi
                     nombre="MELENA DE LEÓN"
                     imagen={melena}
+                    tituloInfo="MENTE EN FOCO"
+                    descripcionInfo="Tu aliado para acompañar la memoria y la concentración."
                     seleccionado={fungiSeleccionado === "melena"}
                     alSeleccionar={() => setFungiSeleccionado("melena")}
                 />
@@ -45,6 +47,8 @@ function SeleccionFungi({ alComenzar }) {
                 <Fungi
                     nombre="REISHI"
                     imagen={reishi}
+                    tituloInfo="UN MOMENTO DE CALMA"
+                    descripcionInfo="Tradicionalmente asociado al equilibrio y al bienestar."
                     seleccionado={fungiSeleccionado === "reishi"}
                     alSeleccionar={() => setFungiSeleccionado("reishi")}
                 />
@@ -52,6 +56,8 @@ function SeleccionFungi({ alComenzar }) {
                 <Fungi
                     nombre="CORDYCEPS"
                     imagen={cordyceps}
+                    tituloInfo="ACTIVÁ TU ENERGÍA"
+                    descripcionInfo="Conocido para acompañar la vitalidad y el rendimiento físico."
                     seleccionado={fungiSeleccionado === "cordyceps"}
                     alSeleccionar={() => setFungiSeleccionado("cordyceps")}
                 />

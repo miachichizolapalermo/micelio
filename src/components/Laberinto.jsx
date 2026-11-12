@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
-const VELOCIDAD_MOVIMIENTO = 75;
-const DURACION_TRANSICION_VISUAL = 68;
+const VELOCIDAD_MOVIMIENTO = 90;
+const DURACION_TRANSICION_VISUAL = 83;
 
 
 // BUSCA AUTOMÁTICAMENTE DÓNDE ESTÁ EL 2

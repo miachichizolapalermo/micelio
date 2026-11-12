@@ -65,13 +65,13 @@
     z-index: 4;
     display: grid;
     place-items: center;
-    padding: 24px;
+    padding: 22px;
     background-color: rgb(25 34 23 / 48%);
 }
 
 .introduccion-nivel {
-    width: min(100%, 430px);
-    padding: 32px 36px;
+    width: min(100%, 600px);
+    padding: 30px 32px;
    
     border-radius: 22px;
     background-color: #E4EED8;
@@ -96,9 +96,21 @@
 
 .introduccion-nivel-descripcion {
     margin: 0;
+    max-width: none;
     font-family: Arial, Helvetica, sans-serif;
     font-size: clamp(15px, 2.5vw, 18px);
     line-height: 1.5;
+}
+
+.introduccion-nivel-crecimiento {
+    margin: 16px 0 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(13px, 2vw, 15px);
+    line-height: 1.4;
+}
+
+.introduccion-nivel .boton {
+    margin-top: 22px;
 }
 
 @media (max-width: 480px) {
