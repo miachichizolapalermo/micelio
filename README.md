@@ -1,16 +1,23 @@
-# React + Vite
+MICELIO
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Conectar para crecer
 
-Currently, two official plugins are available:
+MICELIO es un videojuego de laberintos desarrollado para Fungi Melena, una marca de hongos funcionales. Inspirado en las conexiones del micelio bajo la tierra, el juego propone completar diferentes recorridos para hacer crecer un hongo.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Dinámica del juego
 
-## React Compiler
+El jugador elige entre tres hongos: Melena de León, Reishi o Cordyceps, y debe completar cuatro niveles de laberintos. Cada nivel tiene un tiempo objetivo que determina la eficiencia del jugador y el crecimiento de su hongo. Se puede alcanzar hasta un 25% de crecimiento por nivel, con un máximo acumulado del 100%.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Tecnologías utilizadas
 
-## Expanding the Oxlint configuration
+React + Vite
+JavaScript
+CSS
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+Desarrollo asistido por IA
+
+El proyecto se desarrolló con el apoyo de herramientas de inteligencia artificial. Inicialmente, se utilizó ChatGPT para generar fragmentos de código que luego se incorporaban manualmente en Visual Studio Code. Posteriormente, se trabajó con un agente de IA integrado en VS Code, lo que permitió realizar modificaciones directamente sobre los archivos del proyecto, corregir errores y perfeccionar aspectos como el movimiento, las animaciones y las interacciones. Este proceso facilitó la implementación de las ideas de diseño y el desarrollo de una experiencia más cercana a la propuesta original.
+
+Videojuego online
+
+(https://micelio-tan.vercel.app/)
